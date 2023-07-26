@@ -1,7 +1,9 @@
 pipeline{
     
     agent any 
-    
+        environment {
+           PATH="/opt/maven/bin/:$PATH"
+   }    
     stages {
         
         stage('Git Checkout'){
@@ -10,7 +12,7 @@ pipeline{
                 
                 script{
                     
-                    git branch: 'main', url: 'https://github.com/vikash-kumar01/mrdevops_javaapplication.git'
+                    git branch: 'main', url: ''
                 }
             }
         }
