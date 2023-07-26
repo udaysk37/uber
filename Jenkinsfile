@@ -12,7 +12,7 @@ pipeline{
                 
                 script{
                     
-                    git branch: 'main', url: ''
+                    git branch: 'main', url: 'https://github.com/udaysk37/uber.git'
                 }
             }
         }
@@ -57,7 +57,6 @@ pipeline{
                         sh 'mvn clean package sonar:sonar'
                     }
                    }
-                    
                 }
             }
             stage('Quality Gate Status'){
@@ -71,5 +70,4 @@ pipeline{
                 }
             }
         }
-        
-}
+    }
