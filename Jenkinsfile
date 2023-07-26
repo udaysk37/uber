@@ -59,13 +59,13 @@ pipeline{
                    }
                 }
             }
-            stage('Quality Gate Status'){
+            stage('store artifacts'){
                 
                 steps{
                     
                     script{
                         
-                        waitForQualityGate abortPipeline: false, credentialsId: 'sonar-api'
+
                     }
                 }
             }
